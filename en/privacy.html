@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneDayLeaf 一日笺 Privacy Policy — no account, no server, and no network activity except the one-time purchase with the App Store. Your photos and words stay on your device.">
+  <title>Privacy Policy — OneDayLeaf 一日笺</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark">笺</span>OneDayLeaf<span class="latin">一日笺</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/privacy.html">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+      <a href="../ko/privacy.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>OneDayLeaf does one thing: it helps you write today down as a single note, then keeps it on your own device.</p>
+      <p class="updated">Last updated: November 20, 2026 · Version 1.0.0</p>
+      <p class="updated">The official address of this policy: https://cosmopolition.github.io/dailyleaf-support/privacy.html</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="support.html">Support</a>
+      <a href="#" class="active">Privacy Policy</a>
+    </nav>
+
+    <section>
+
+      <div class="highlight-box">
+        <p><strong>The short version: no account, no server, and no network activity except talking to the App Store when you buy the unlock or restore it on a new device. Your photos and words stay on this device.</strong></p>
+        <p style="margin-top:10px">The app integrates no analytics SDK, no crash reporting service, no ad SDK and no third-party tracking library. It also links no networking framework — that is not a promise, it is the absence of that code in the binary. What you write has nowhere to be sent, because there is no server to send it to.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 1 -->
+      <p class="section-title">Section 1 · What we collect</p>
+
+      <div class="article">
+        <h3>1.1 What we explicitly do <strong>not</strong> collect</h3>
+        <p>Name, email address, account password, phone number, location, contacts, microphone, camera, clipboard contents, device identifiers, advertising identifiers (IDFA), crash logs, usage analytics — none of them.</p>
+        <p>We have no account system, so there is no such thing as "signing up". The app integrates no analytics SDK, no crash reporting service, no ad SDK and no third-party tracking library, and it does not request the advertising tracking permission.</p>
+      </div>
+
+      <div class="article">
+        <h3>1.2 What the app records on your own machine</h3>
+        <p>So that you can write, save and find your notes again, the app keeps the following on this device:</p>
+        <ul>
+          <li><strong>Draft</strong> — the one you are writing right now: photo + text</li>
+          <li><strong>Collection</strong> — every note you have kept: photo + text + date + the style used at the time</li>
+          <li><strong>Trash</strong> — the ones you removed but have not emptied (a mistake can still be undone)</li>
+          <li><strong>Preferences</strong> — interface language, paper colour, whether to show the date stamp</li>
+          <li><strong>Whether all styles are unlocked</strong> — a flag remembered after the purchase</li>
+        </ul>
+        <p>All of it is written to <strong>this device</strong>. There is no copy of it anywhere else.</p>
+      </div>
+
+      <div class="article">
+        <h3>1.3 What you hand over yourself</h3>
+        <p>Only two things need you to do something by hand:</p>
+        <ul>
+          <li><strong>Pick a photo</strong> — using the system photo picker (PhotosPicker). It runs outside the app's sandbox, so <strong>the app cannot reach your whole library</strong>; it only gets the single photo you tapped.</li>
+          <li><strong>Save a finished note to your Photos</strong> — the one and only time the app asks the system for permission. The prompt reads "Save the finished note to Photos".</li>
+        </ul>
+        <p>On top of that, the app reads <strong>the capture time</strong> from the single photo you picked — it uses it to decide which day the signature should carry (make a leaf today from a photo taken last week, and the signature should say last week). <strong>Nothing else in the photo is read</strong>: no camera model, no GPS coordinates, no lens data, no edit history.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 2 -->
+      <p class="section-title">Section 2 · Permissions</p>
+
+      <div class="article">
+        <h3>2.1 One permission only</h3>
+        <p><strong>"Save the finished note to Photos"</strong> (system identifier <code>NSPhotoLibraryAddUsageDescription</code>). It is only triggered when you want to save a finished note into your library.<br>
+        <strong>Reading photos needs no permission at all</strong> — because picking a photo goes through a system component: the selection screen runs on your device, and the app only receives the result.</p>
+      </div>
+
+      <div class="article">
+        <h3>2.2 What we never ask for</h3>
+        <p>Camera, microphone, contacts, location, Bluetooth, background app refresh, tracking permission — none of them are requested.<br>
+        Apart from the photo library write description above, the app's <code>Info.plist</code> contains <strong>no other permission declarations</strong>; you can download the app and check for yourself.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 3 -->
+      <p class="section-title">Section 3 · Where your data lives</p>
+
+      <div class="article">
+        <h3>3.1 All of it on this device</h3>
+        <p>The app writes its files into the <code>Documents</code> directory of the app sandbox, and its preferences into the system preferences. Specifically, these:</p>
+        <table class="file-table">
+          <thead><tr><th>Path</th><th>What is inside</th></tr></thead>
+          <tbody>
+            <tr><td>Documents/Archive/</td><td>Your collection. Each note is a <code>&lt;id&gt;.json</code> (text, date, style) plus a <code>&lt;id&gt;.jpg</code> (photo)</td></tr>
+            <tr><td>Documents/Archive/.trash/</td><td>The Trash. Removed notes that can still be put back</td></tr>
+            <tr><td>Documents/Draft/</td><td>The one draft you have not saved yet</td></tr>
+            <tr><td>UserDefaults</td><td>Interface language, paper colour, date stamp switch, unlocked state</td></tr>
+            <tr><td>Temporary directory</td><td>Temporary files for PDF export and backup zip; deleted as soon as they are used</td></tr>
+          </tbody>
+        </table>
+        <p>The app does not request <code>NSUserTrackingUsageDescription</code>, and it requests no background capabilities either.</p>
+      </div>
+
+      <div class="article">
+        <h3>3.2 The photos you keep carry no metadata at all</h3>
+        <p>When a photo you picked is stored in your collection, it is <strong>re-encoded as JPEG</strong>, and that step drops the EXIF entirely — the file on disk contains <strong>no metadata of any kind</strong>.<br>
+        In other words, a photo in your collection does not carry along the kind of information that says "this was taken here" or "this was shot on that camera".<br>
+        The capture time was used once, to set the signature date. <strong>It was not stored.</strong></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 4 -->
+      <p class="section-title">Section 4 · The network</p>
+
+      <div class="article">
+        <h3>4.1 The app does not use the network</h3>
+        <p>The app's code contains no <code>URLSession</code>, no <code>URLRequest</code>, and no request code for any <code>http://</code> or <code>https://</code>. That is not a promise, it is something you can check: <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code> in <code>Info.plist</code>, and no networking framework exists in the binary.</p>
+        <p>Therefore: <strong>no account, no server, no push notifications, no cloud sync, and no risk of the kind "our database was breached"</strong>. The price is that there is no cloud recovery either — if you lose it, it is lost, unless you made a backup yourself.</p>
+      </div>
+
+      <div class="article">
+        <h3>4.2 The one exception: talking to the store</h3>
+        <p>If you buy "Unlock all styles forever" (¥3, one time), or tap <strong>Restore Purchases</strong> to bring the unlock onto a new device, the app talks to the App Store through Apple's official StoreKit. The payment is handled by <strong>Apple</strong>; the app never touches your card details and does not know your Apple ID password.<br>
+        Apart from that, the app makes no network requests.</p>
+        <p>This transaction is recorded in your own Apple account under Apple's policy — that is Apple's system, and we neither see nor control it.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 5 -->
+      <p class="section-title">Section 5 · Third parties</p>
+
+      <div class="article">
+        <h3>5.1 Everything is built into the system</h3>
+        <ul>
+          <li><strong>Photos</strong> — the system picker helps you choose a photo, the system library helps you save one</li>
+          <li><strong>StoreKit</strong> — appears only when you tap Buy</li>
+        </ul>
+        <p>No third-party SDK, no third-party analytics, no third-party ads, no third-party font server. The four fonts bundled with the app are distributed under their own open source licences: three of them under the SIL Open Font License 1.1, and one free for commercial use by permission from its author — the licence notices can be read item by item under Settings → About this app.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 6 -->
+      <p class="section-title">Section 6 · iCloud backup (this is the system's behaviour)</p>
+
+      <div class="article">
+        <h3>6.1 We do not sync; the system backs up</h3>
+        <p>The app has <strong>no</strong> CloudKit container and no iCloud sync feature — two devices do not keep each other up to date.</p>
+        <p>But if iCloud backup is on for your iPhone (Settings → your name → iCloud → iCloud Backup), then the <code>Documents</code> directory is backed up <strong>by the system</strong> along with the rest of the device. When you switch phones, those notes come back with the system backup. That is the default behaviour of iOS, not a sync feature we built.</p>
+        <p>If you would rather control the backup yourself: use Settings → Back up to Files, and the app will package your collection, Trash and draft into one zip (photos and text included) for you to keep; on another device, import it with Restore from a backup.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 7 -->
+      <p class="section-title">Section 7 · Exporting and sharing</p>
+
+      <div class="article">
+        <h3>7.1 Once a file leaves the device, it is your call</h3>
+        <ul>
+          <li><strong>Export the whole book as PDF</strong> — you lay the notes you have collected out as one book and save it as a PDF.</li>
+          <li><strong>Back up to Files</strong> — packed into a zip, and you decide where it goes.</li>
+          <li><strong>Save to Photos</strong> — the finished note enters your system library, and after that it is the library's business.</li>
+        </ul>
+        <p>Once you send one of these files out with Share, <strong>it has left your device</strong>. Whether the recipient keeps it, forwards it or deletes it is decided by you and them; we are no longer involved and we cannot see it.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 8 -->
+      <p class="section-title">Section 8 · Data security</p>
+
+      <div class="article">
+        <h3>8.1 We do not add encryption, and we say so plainly</h3>
+        <p>The text and photos of your collection are stored in the app sandbox as <strong>ordinary files</strong>, with <strong>no extra layer of encryption</strong>. We chose plain files so that "you can open it and check it yourself at any time" holds true; the price is that it has nothing stronger than the system's own file protection.<br>
+        Your first line of defence is the device passcode itself. <strong>Do not hand your unlocked device to someone else</strong>, and do not leave an unencrypted backup zip in a public place.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 9 -->
+      <p class="section-title">Section 9 · Children's privacy</p>
+
+      <div class="article">
+        <h3>9.1 Not aimed at children, and no children's data is collected</h3>
+        <p>OneDayLeaf is not designed for children. Because we collect no personal information at all (children's personal information included), there is nothing extra to do here.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 10 -->
+      <p class="section-title">Section 10 · Your rights</p>
+
+      <div class="article">
+        <h3>10.1 Deleting the app deletes everything</h3>
+        <p>Because there is no account and no server, <strong>uninstalling the app deletes every note, draft and item in the Trash</strong>, and nothing is left anywhere else. That is a good thing (it is clean) and also the price (there is no cloud recovery).<br>
+        To keep something, back up to Files first. For any other way of disposing of it — removing a single note, or emptying just the Trash — the app has a matching action.</p>
+        <p>Your other rights over the data (access, correction, deletion, objection to processing, portability) hold here naturally: because the data is only in your hands, we have no copy we could refuse you.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 11 -->
+      <p class="section-title">Section 11 · App Store privacy labels</p>
+
+      <div class="article">
+        <h3>11.1 How the labels line up</h3>
+        <table class="file-table">
+          <thead><tr><th>App Store privacy label</th><th>Our situation</th></tr></thead>
+          <tbody>
+            <tr><td>Data collection</td><td>No data collected</td></tr>
+            <tr><td>Data sharing</td><td>Not shared with third parties</td></tr>
+            <tr><td>Data used for tracking</td><td>Not used for tracking</td></tr>
+            <tr><td>Third-party SDKs</td><td>None</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 12 -->
+      <p class="section-title">Section 12 · Changes to this policy</p>
+
+      <div class="article">
+        <h3>12.1 If it changes, we say so</h3>
+        <p>If this policy changes in any material way (in particular if a network request or a permission request is added), we will <strong>update the date and version number at the top of this page</strong> and say so in the app's release notes. The app itself does not use the network, so it cannot notify you with a push — please treat this page as the source of truth.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 13 -->
+      <p class="section-title">Section 13 · Contact us</p>
+
+      <div class="article">
+        <h3>13.1 Write to us</h3>
+        <p>Any question about this policy, anything you want deleted, or anything that is not clear enough in the wording — just write:</p>
+        <p style="margin-top:14px"><strong><a href="mailto:peer2peer.wang@gmail.com">peer2peer.wang@gmail.com</a></strong></p>
+        <p style="margin-top:12px">We answer by hand. Rest assured, no third party ever sees that email.</p>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>OneDayLeaf 一日笺 · Privacy Policy · Last updated November 20, 2026<br>
+    <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

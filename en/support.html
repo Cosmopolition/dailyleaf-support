@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneDayLeaf 一日笺 Support — how to write a note, how to make a booklet, how to back up, where your data lives, and how to restore a purchase.">
+  <title>Support — OneDayLeaf 一日笺</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark">笺</span>OneDayLeaf<span class="latin">一日笺</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/support.html">中文</a>
+      <a href="../ja/support.html">日本語</a>
+      <a href="../ko/support.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Support</span>
+      <h1>Support</h1>
+      <p>OneDayLeaf is a small book that lives only on your phone. Pick a photo, write one line about today, then keep it.</p>
+      <p class="updated">Last updated: November 20, 2026 · Version 1.0.0</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="#" class="active">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+
+    <section>
+
+      <div class="highlight-box green">
+        <p><strong>Three things first:</strong></p>
+        <p style="margin-top:10px">① <strong>No account, nothing to sign in to</strong>; ② <strong>No network activity except talking to the App Store when you buy or restore a purchase</strong>; ③ <strong>Deleting the app deletes your notes</strong> — back up first if you want to keep them.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="section-title">What is in the app</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="emoji">✍️</span>
+          <h3>Write Today</h3>
+          <p>The first of the three tabs. Swap the photo, pick the date, adjust the style, write today's line, then keep it.</p>
+        </div>
+        <div class="feature-card">
+          <span class="emoji">📔</span>
+          <h3>Collection</h3>
+          <p>Every note you have kept lives here, filed by month and year. Read them back, zoom in, remove one and put it back, and print enough of them as one book.</p>
+        </div>
+        <div class="feature-card">
+          <span class="emoji">🎨</span>
+          <h3>Four fonts and four papers</h3>
+          <p>Source Han Serif, LXGW WenKai, Smiley Sans, Handwriting — pick one typeface and one paper. A note uses one typeface throughout; fonts are never mixed on one sheet.</p>
+        </div>
+        <div class="feature-card">
+          <span class="emoji">📄</span>
+          <h3>Booklets and backups</h3>
+          <p>Collect 5 notes and they print as one PDF; at any time you can pack every note into a zip and hold the backup yourself.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="section-title">Frequently asked questions</p>
+
+      <details class="faq-item">
+        <summary>What does OneDayLeaf actually do?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>It is a record card, one page per day. You pick a photo you took today, write a line (or write nothing at all), and the app lays it out as a single note — a card with a paper colour, a typeface and a red seal.</p>
+          <p>Once written, it goes into your collection. Collect enough of them and you can print them as one PDF to keep.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is a photo required?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. You can write text only and skip the photo — a blank note still saves and still prints.</p>
+          <p>Photos are chosen with the system photo picker: the app gets the one you tap, and nothing else from your library.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does changing the typeface cost anything?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>The app has one in-app purchase, "Unlock all styles forever" — <strong>¥3, one time</strong>. Once you have bought it, all four typefaces and all four papers are unlocked. No subscription, no expiry.</p>
+          <p>Before you buy, the styles that are already in the app work as they are — the purchase buys "all of them", it is not the ticket that lets you use any of them.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does "booklet" mean?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Once your collection has <strong>5 notes</strong>, you can lay them out as one book — the kind with a cover, a table of contents and page numbers. Once it is laid out you can export it straight to PDF, or share the whole book.</p>
+          <p>Exporting the booklet is free; no extra purchase is needed.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is anything I write uploaded?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. The app's code contains no <code>URLSession</code>, no <code>URLRequest</code>, and no http request code at all. There is no server to send to, and no account to send it from.</p>
+          <p>The only network request is the handshake with the App Store when you tap Buy or Restore Purchases; the payment itself is handled by Apple. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I switch phones?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Two routes, depending on what you want:</p>
+          <p><strong>① Let the system carry it</strong> — if iCloud backup is on for your iPhone (Settings → your name → iCloud → iCloud Backup), your collection travels with the device backup and comes back once the app is installed on the new phone. Note that this is iOS backup behaviour, <strong>not</strong> live sync between two devices.</p>
+          <p><strong>② Carry it yourself</strong> — on the old phone, Settings → Back up to Files gives you a <code>OneDayLeaf-backup.zip</code>. Move it to the new phone however you like, then import it there under Settings → Restore from a backup.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is actually inside the backup file?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>One zip, with three parts inside:</p>
+          <table class="file-table">
+            <thead><tr><th>Directory</th><th>Contents</th></tr></thead>
+            <tbody>
+              <tr><td>Archive/</td><td>Your collection. Each note is one json (text, date, style) plus one jpg (photo)</td></tr>
+              <tr><td>Archive/.trash/</td><td>The notes in the Trash that have not been emptied yet</td></tr>
+              <tr><td>Draft/</td><td>The one draft you have not saved yet</td></tr>
+            </tbody>
+          </table>
+          <p>Your preferences (language, paper colour, the date stamp switch) are not in the backup — they belong to the device, so choose them again after you switch.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does restoring from a backup overwrite my current notes?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. Restoring is an <strong>import</strong>: the notes in the backup go into your collection, and what you already have is not cleared. Before importing, the app tells you how many notes the backup holds, and it only acts once you confirm.</p>
+          <p>If the backup carries a draft and this device has no draft right now, that draft is restored as well.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why does saving to Photos need permission?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>For this one permission only: "Save the finished note to Photos". It is a <strong>write</strong> permission, not a read permission.</p>
+          <p>Reading photos needs no authorization at all — the picker is a system component that does the selecting on your device, and the app only receives the result. The camera, the microphone, location and contacts are never requested.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is the location data kept in my photos?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. When a photo goes into your collection it is re-encoded as JPEG, and the file on disk ends up with no metadata at all — the camera model and the GPS coordinates in the EXIF are all dropped.</p>
+          <p>The capture time is the one exception: the app reads it once to decide which day the signature should carry, <strong>then does not keep it</strong>.</p>
+          <p>In other words, your notes do not carry "where this photo was taken" along with them.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I keep my styles if I change device?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Yes. On the new device, open the app, go to the purchase screen and tap "<strong>Already bought? Restore</strong>" — with the same Apple account you can restore the purchase onto the new device.</p>
+          <p>Restore Purchases goes through Apple's official flow; the app itself does not need the network for anything else.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I delete my data for good?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Because there is no account and no server, <strong>deleting the app deletes everything</strong> — collection, Trash and draft all go, and no copy is left anywhere else.</p>
+          <p>If you want to keep part of it: back up to Files first, then delete the app, and the zip is in your own hands.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Which devices does the app support?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>iPhone (including the iPhone Duo foldable, adapted for both the inner and the outer screen) and iPad. In landscape on a wide screen, the layout splits into two columns.</p>
+          <p>The interface is available in 简体中文, English, 日本語 and 한국어; switch under Settings → Language and it takes effect immediately.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I use the fonts commercially?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Yes — and the licensing terms ship with the app. Under <strong>Settings → About</strong> there is a licence page that spells out each typeface one by one: where it comes from, what the licence is, and who gets the credit.</p>
+          <p>Three of them are under the SIL Open Font License 1.1; the handwriting face is licensed by its author for free commercial use (including use in company products). We use them only to render the leaves you write — we don't offer the font files themselves for download or export.</p>
+        </div>
+      </details>
+
+      <div class="divider"></div>
+
+      <div class="contact-section">
+        <h2>Still not sorted?</h2>
+        <p>Write to us, tell us what happened, and a person answers.</p>
+        <a class="contact-btn" href="mailto:peer2peer.wang@gmail.com">✉️ peer2peer.wang@gmail.com</a>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>OneDayLeaf 一日笺 · Support · Last updated November 20, 2026<br>
+    <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

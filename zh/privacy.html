@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="一日笺 OneDayLeaf 隐私政策 —— 没有账号、没有服务器、除买断时与 App Store 通信外不联网。你的照片和文字只留在这台设备上。">
+  <title>隐私政策 — 一日笺 OneDayLeaf</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark">笺</span>一日笺<span class="latin">OneDayLeaf</span></a>
+    <nav class="lang-switch">
+      <a href="../en/privacy.html">EN</a>
+      <a href="#" class="active">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+      <a href="../ko/privacy.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Legal</span>
+      <h1>隐私政策</h1>
+      <p>一日笺只做一件事：帮你把今天写成一张笺，然后留在你自己的设备上。</p>
+      <p class="updated">最后更新：2026 年 11 月 20 日 · 版本 1.0.0</p>
+      <p class="updated">本政策的正式地址：https://cosmopolition.github.io/dailyleaf-support/privacy.html</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="support.html">技术支持</a>
+      <a href="#" class="active">隐私政策</a>
+    </nav>
+
+    <section>
+
+      <div class="highlight-box">
+        <p><strong>一句话版本：没有账号，没有服务器，除了购买或恢复购买时跟 App Store 通信，不联网。你的照片和文字只留在这台设备上。</strong></p>
+        <p style="margin-top:10px">App 里没有接入任何分析 SDK、崩溃上报服务、广告 SDK 或第三方追踪库。它也没有链接任何网络框架 —— 这不是承诺，是二进制里根本不存在那段代码。你写的东西没有服务器可以传，因为没有服务器。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 1 -->
+      <p class="section-title">第 1 条 · 我们收集什么</p>
+
+      <div class="article">
+        <h3>1.1 我们明确<strong>不</strong>收集的东西</h3>
+        <p>姓名、邮箱、账号密码、手机号、位置信息、通讯录、麦克风、相机、剪贴板内容、设备标识符、广告标识符（IDFA）、崩溃日志、使用分析 —— 一项都没有。</p>
+        <p>我们没有账号系统，所以不存在「注册」这一说。App 里没有接入任何分析 SDK、崩溃上报服务、广告 SDK 或第三方追踪库，也没有申请广告追踪许可。</p>
+      </div>
+
+      <div class="article">
+        <h3>1.2 App 在你机器上记下的东西</h3>
+        <p>为了让你能写字、存笺、随时找回来，App 会在本机记这些：</p>
+        <ul>
+          <li><strong>草稿</strong> —— 你正在写的那一张：照片 + 文字</li>
+          <li><strong>笺集</strong> —— 你存好的每一条：照片 + 文字 + 日期 + 当时用的样式</li>
+          <li><strong>回收站</strong> —— 你删掉但还没清空的那几条（删错了还能放回去）</li>
+          <li><strong>设置偏好</strong> —— 界面语言、纸色、要不要显示落款</li>
+          <li><strong>是否已解锁全部样式</strong> —— 买断之后记住的一个标志</li>
+        </ul>
+        <p>这些全都写在<strong>你这台设备上</strong>，没有一份副本在别处。</p>
+      </div>
+
+      <div class="article">
+        <h3>1.3 你主动给的东西</h3>
+        <p>只有两件事需要你亲手做：</p>
+        <ul>
+          <li><strong>选一张照片</strong> —— 用的是系统的照片选择器（PhotosPicker）。它运行在 App 的沙盒之外，<strong>App 拿不到你的整个相册</strong>，只拿得到你亲手点的那一张。</li>
+          <li><strong>把做好的笺存到相册</strong> —— 这是 App 唯一一次向系统申请权限，弹窗文案是「把做好的笺存到相册」。</li>
+        </ul>
+        <p>另外，App 会从你选中的那一张照片里<strong>读一次拍摄时间</strong> —— 用来决定笺上落款写哪一天（今天做一张上周拍的照片，落款就该写上周那天）。<strong>除拍摄时间以外，照片里的其它信息一概不读</strong>：机型、GPS 坐标、镜头参数、编辑历史都不碰。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 2 -->
+      <p class="section-title">第 2 条 · 权限</p>
+
+      <div class="article">
+        <h3>2.1 只有一次授权</h3>
+        <p><strong>「把做好的笺存到相册」</strong>（系统标识 <code>NSPhotoLibraryAddUsageDescription</code>）。它只在你想把成品笺存进相册时才触发。<br>
+        <strong>读取照片不需要任何权限</strong> —— 因为选择照片走的是系统组件，选择界面在你的设备上，App 只拿到结果。</p>
+      </div>
+
+      <div class="article">
+        <h3>2.2 我们不申请的</h3>
+        <p>相机、麦克风、通讯录、位置、蓝牙、后台 App 刷新、追踪许可 —— 一律不申请。<br>
+        App 的 <code>Info.plist</code> 里除了上面那一条相册写入说明，<strong>没有任何其它权限声明</strong>；你可以下载 App 自己核对。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 3 -->
+      <p class="section-title">第 3 条 · 数据存在哪</p>
+
+      <div class="article">
+        <h3>3.1 全部在这台设备上</h3>
+        <p>App 把文件写在 App 沙盒的 <code>Documents</code> 目录里，偏好写在系统偏好里。具体是这些：</p>
+        <table class="file-table">
+          <thead><tr><th>路径</th><th>里面是什么</th></tr></thead>
+          <tbody>
+            <tr><td>Documents/Archive/</td><td>笺集。每一条是一个 <code>&lt;id&gt;.json</code>（文字、日期、样式）+ 一张 <code>&lt;id&gt;.jpg</code>（照片）</td></tr>
+            <tr><td>Documents/Archive/.trash/</td><td>回收站。删掉但还能放回的那些</td></tr>
+            <tr><td>Documents/Draft/</td><td>还没存好的那一张草稿</td></tr>
+            <tr><td>UserDefaults</td><td>界面语言、纸色、落款开关、是否已解锁</td></tr>
+            <tr><td>临时目录</td><td>导出 PDF / 备份 zip 时的临时文件，用完即删</td></tr>
+          </tbody>
+        </table>
+        <p>App 没有申请 <code>NSUserTrackingUsageDescription</code>，也没有申请任何后台能力。</p>
+      </div>
+
+      <div class="article">
+        <h3>3.2 存下来的照片不带任何元信息</h3>
+        <p>照片存进笺集时会被<strong>重新编码成 JPEG</strong>，这一步把 EXIF 整个丢掉了 —— 落盘后的文件里<strong>没有任何元信息</strong>。<br>
+        也就是说，笺集里的照片不会带着「这张照片是在哪儿拍的」「用哪台机器拍的」这类信息走。<br>
+        拍摄时间只被用了一次（定落款日期），<strong>没有存下来</strong>。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 4 -->
+      <p class="section-title">第 4 条 · 网络</p>
+
+      <div class="article">
+        <h3>4.1 App 自己不联网</h3>
+        <p>App 的代码里没有 <code>URLSession</code>、没有 <code>URLRequest</code>、没有任何 <code>http://</code> 或 <code>https://</code> 的请求代码。这不是一句承诺，是可以核对的：<code>Info.plist</code> 里 <code>ITSAppUsesNonExemptEncryption</code> 标记为 <code>false</code>，二进制里也不存在网络框架。</p>
+        <p>因此：<strong>没有账号、没有服务器、没有推送通知、没有云端同步、没有「我们的数据库被入侵」这一类风险</strong>。代价是也没有云端找回 —— 丢了就是丢了，除非你自己备份过。</p>
+      </div>
+
+      <div class="article">
+        <h3>4.2 唯一的例外：跟商店打交道的时候</h3>
+        <p>如果你购买「全部样式永久解锁」（¥3，一次性），或者点「恢复购买」把买断找回新设备，App 会通过苹果官方的 StoreKit 与 App Store 通信。付款由 <strong>Apple 处理</strong>，App 不接触你的银行卡信息，也不知道你的 Apple ID 密码。<br>
+        除此之外，App 不发出任何网络请求。</p>
+        <p>这笔交易会按 Apple 的政策记录在你自己的 Apple 账户里 —— 那是 Apple 的系统，我们看不到也管不了。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 5 -->
+      <p class="section-title">第 5 条 · 第三方</p>
+
+      <div class="article">
+        <h3>5.1 用的都是系统自带的</h3>
+        <ul>
+          <li><strong>照片（Photos）</strong> —— 系统选择器帮你选照片，系统相册帮你存照片</li>
+          <li><strong>StoreKit</strong> —— 只在你点击购买时出现</li>
+        </ul>
+        <p>没有第三方 SDK，没有第三方分析，没有第三方广告，没有第三方字体服务器。App 里附带的四款字体按各自的开源许可随包分发，其中三款是 SIL Open Font License 1.1，一款是作者授权免费商用 —— 许可声明在 App 的「设置 → 关于」里可以逐条查看。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 6 -->
+      <p class="section-title">第 6 条 · iCloud 备份（这是系统的行为）</p>
+
+      <div class="article">
+        <h3>6.1 我们不做同步，系统会做备份</h3>
+        <p>App <strong>没有</strong> CloudKit 容器，也没有 iCloud 同步功能 —— 两台设备之间不会互相同步。</p>
+        <p>但如果你的 iPhone 开着 iCloud 备份（「设置 → 你的名字 → iCloud → iCloud 云备份」），那么 <code>Documents</code> 目录会被<strong>系统</strong>连同整机一起备份。换机时这些笺会跟着系统备份一起回来。这是 iOS 的默认行为，不是我们做的同步。</p>
+        <p>如果你想要更可控的备份：用「设置 → 备份到文件」，App 会把笺集、回收站和草稿打成一个 zip（含照片与文字）交给你自己保管，在别的设备上用「从备份恢复」导入。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 7 -->
+      <p class="section-title">第 7 条 · 导出与分享</p>
+
+      <div class="article">
+        <h3>7.1 文件一旦离开设备，就归你决定</h3>
+        <ul>
+          <li><strong>导出整本 PDF</strong> —— 你把攒够的笺排成一本，存成 PDF。</li>
+          <li><strong>备份到文件</strong> —— 打成 zip，你自己决定存哪。</li>
+          <li><strong>存到相册</strong> —— 成品笺进入系统相册，之后它由相册管理。</li>
+        </ul>
+        <p>用「分享」把这些文件发出去之后，<strong>它们就离开了你的设备</strong>。接收方能保存、转发还是删除，由你和对方决定，我们不再参与，也看不到。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 8 -->
+      <p class="section-title">第 8 条 · 数据安全</p>
+
+      <div class="article">
+        <h3>8.1 我们不额外加密，明说</h3>
+        <p>笺集的文字和照片以<strong>普通文件形式</strong>保存在 App 沙盒里，<strong>没有额外加一层加密</strong>。我们选择明文，是为了让「你随时能打开自己核对」这件事成立；代价是它没有比系统文件保护更强的一层。<br>
+        你的第一道防线是设备本身的锁屏密码。<strong>请不要在解锁状态下把设备交给别人</strong>，也不要把未加密的备份 zip 放在公共位置。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 9 -->
+      <p class="section-title">第 9 条 · 儿童隐私</p>
+
+      <div class="article">
+        <h3>9.1 不面向儿童，也不收集儿童信息</h3>
+        <p>一日笺不是为儿童设计的。由于我们不收集任何个人信息（包括儿童的个人信息），这一条没有额外的事要做。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 10 -->
+      <p class="section-title">第 10 条 · 你的权利</p>
+
+      <div class="article">
+        <h3>10.1 删除 App，就是删除全部</h3>
+        <p>因为没有账号、没有服务器，<strong>卸载 App 会连带删掉所有笺、草稿和回收站</strong>，不会有任何东西留在别处。这是好事（干净），也是代价（没有云端找回）。<br>
+        想留就先「备份到文件」。想要别的处置方式 —— 比如清除某一条、或只清回收站 —— App 里有对应的操作。</p>
+        <p>你对数据的其它权利（访问、更正、删除、反对处理、可携带），在这里天然都成立：因为数据只在你手上，我们没有可以拒绝你的副本。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 11 -->
+      <p class="section-title">第 11 条 · App Store 隐私标签</p>
+
+      <div class="article">
+        <h3>11.1 对照关系</h3>
+        <table class="file-table">
+          <thead><tr><th>App Store 隐私标签</th><th>我们的实际情况</th></tr></thead>
+          <tbody>
+            <tr><td>数据收集</td><td>不收集任何数据</td></tr>
+            <tr><td>数据共享</td><td>不与第三方共享</td></tr>
+            <tr><td>数据用于追踪</td><td>不用于追踪</td></tr>
+            <tr><td>第三方 SDK</td><td>无</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 12 -->
+      <p class="section-title">第 12 条 · 政策变更</p>
+
+      <div class="article">
+        <h3>12.1 变了就说</h3>
+        <p>如果这份政策有实质变化（尤其是新增了网络请求或权限申请），我们会<strong>更新本页顶部的日期与版本号</strong>，并在 App 的更新说明里写明。App 本身不联网，所以不会用推送来通知你 —— 请以本页为准。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 13 -->
+      <p class="section-title">第 13 条 · 联系我们</p>
+
+      <div class="article">
+        <h3>13.1 写信给我们</h3>
+        <p>任何关于这份政策的疑问、想删除的东西、觉得哪里写得不清楚，都可以直接写信：</p>
+        <p style="margin-top:14px"><strong><a href="mailto:peer2peer.wang@gmail.com">peer2peer.wang@gmail.com</a></strong></p>
+        <p style="margin-top:12px">我们会人工回复。放心，这封邮件不会被任何第三方看到。</p>
+      </div>
+
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>一日笺 OneDayLeaf · 隐私政策 · 最后更新 2026 年 11 月 20 日<br>
+    <a href="support.html">技术支持</a> · <a href="privacy.html">隐私政策</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
